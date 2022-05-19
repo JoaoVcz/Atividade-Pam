@@ -1,63 +1,63 @@
-import  {  StatusBar  }  from  'expo-status-bar' ;
-import  {  StyleSheet ,  Text ,  Image  ,  View  }  from  'react-native' ;
+// feito por João Vitor Da Cruz Souza e Matheus Macedo
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, Image , View } from 'react-native';
 
-importar  Img  de  './assets/Lua.png' ;
+import Img from './assets/Lua.png';
 
-exportar  função padrão  App ( ) {  
-  retornar  (
-    < Estilo de visualização  = { estilos . recipiente } >
-      < Estilo da imagem  = { estilos . img } fonte = { img } / > 
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Image style={styles.img} source={Img}/>
 
     
-    < Estilo de visualização  = { estilos . caixatexto } > 
-    < Estilo de texto  = { estilos . titulo } > Lua < / Text >
-    < Estilo de texto  = { estilos . texto } > A lua é o satélite natural do < Text style = { styles . especial } > planeta Terra < / Text > , distanciados por aproximadamente 384.405km. < / Texto > 
-    < / Ver >
-    < / Ver >
-  ) ;
+    <View style={styles.boxtexto} >
+    <Text style={styles.titulo}>Lua</Text>
+    <Text style={styles.texto}>A lua é o satélite natural do <Text style={styles.especial}>planeta Terra</Text>, distanciados por aproximadamente 384.405km.</Text>
+    </View>
+    </View>
+  );
 }
 
- estilos  const =  StyleSheet . criar ( {
-  recipiente : {
-    Flexão : 1 ,
-    backgroundColor : '#000' ,
-    alignItems : 'center' ,
-    justificarConteúdo : 'centro' ,
-    preenchimento : 30
-  } ,
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 30
+  },
 
-  img : {
-    largura : 100 ,
-    altura : 100 ,
-    margemBaixo : 50
-  } ,
+  img: {
+    width: 100,
+    height: 100,
+    marginBottom: 50
+  },
 
-  caixatexto : {
-    borderColor : "#fff" ,
-    largura da borda : 2 ,
-    borderRadius : 20 ,
-    borderStyle : 'pontilhado' ,
-    preenchimentoVertical : 10 ,
-    preenchimentoHorizontal : 20
-  } ,
+  boxtexto: {
+    borderColor: "#fff",
+    borderWidth: 2,
+    borderRadius: 20,
+    borderStyle: 'dotted',
+    paddingVertical: 10,
+    paddingHorizontal: 20
+  },
 
-  título : {
-    cor : '#fff' ,
-    tamanho da fonte : 30 ,
-    fontWeight : 'bold' ,
-    margemBottom : 20 ,
-    textAlign : 'centro'
-  } ,
+  titulo: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    textAlign: 'center'
+  },
 
-  texto : {
-    tamanho da fonte : 20 ,
-    cor : '#fff' ,
-    textAlign : 'centro'
-  } ,
+  texto: {
+    fontSize: 20,
+    color: '#fff',
+    textAlign: 'center'
+  },
 
-  especial : {
-    fontStyle : 'italic' ,
-    fontWeight : 'bold'
+  especial: {
+    fontStyle: 'italic',
+    fontWeight: 'bold'
   }
-} ) ;
-// feito por João Vitor Da Cruz Souza e Matheus Macedo
+});
